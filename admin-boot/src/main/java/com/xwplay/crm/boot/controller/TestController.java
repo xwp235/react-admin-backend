@@ -2,18 +2,23 @@ package com.xwplay.crm.boot.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.xwplay.crm.boot.entity.AccountEntity;
+import com.xwplay.crm.boot.entity.MenuEntity;
 import com.xwplay.crm.boot.mapper.AccountMapper;
+import com.xwplay.crm.boot.mapper.MenuMapper;
 import com.xwplay.crm.common.response.JsonResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import cn.dev33.satoken.stp.StpUtil;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class TestController {
 
     private final AccountMapper accountMapper;
+    private final MenuMapper menuMapper;
 
     @GetMapping("1")
     public String test(){
@@ -39,6 +44,11 @@ public class TestController {
     @GetMapping("isLogin")
     public JsonResult isLogin() {
         return JsonResult.ok("当前会话是否登录：" + StpUtil.isLogin());
+    }
+
+    @GetMapping("allMenus")
+    public List<MenuEntity> getMenus() {
+        return menuMapper.selectList(null);
     }
 
 }

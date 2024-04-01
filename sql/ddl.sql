@@ -40,7 +40,7 @@ COMMENT ON COLUMN "public"."sys_menu"."sm_state" IS '菜单状态  停用=0 启�
 
 COMMENT ON COLUMN "public"."sys_menu"."sm_icon" IS '菜单图标，仅在菜单类型为按钮时才需要设置';
 
-COMMENT ON COLUMN "public"."sys_menu"."sm_name" IS '菜单名称，支持多语言:[{"ja":"メニュー１","en":"Menu1","ja":"菜单1"}]';
+COMMENT ON COLUMN "public"."sys_menu"."sm_name" IS '菜单名称，支持多语言:{"ja-JP":"メニュー１","en-US":"Menu1","zh-CN":"菜单1"}';
 
 COMMENT ON COLUMN "public"."sys_menu"."sm_code" IS '每项菜单的唯一标识';
 
