@@ -1,6 +1,7 @@
 package com.xwplay.crm.common.interceptor;
 
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
+import com.xwplay.crm.common.constants.AppConstants;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.MDC;
@@ -14,12 +15,8 @@ public class LogInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 增加日志流水号
-        MDC.put("LOG_ID", IdWorker.getIdStr());
+        MDC.put(AppConstants.LOG_ID, IdWorker.getIdStr());
         return true;
     }
 
-    @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception e) throws Exception {
-
-    }
 }

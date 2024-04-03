@@ -1,0 +1,28 @@
+@host = http://localhost:8080
+@apiPrefix = /api
+
+### 用户登录
+POST {{host}}{{apiPrefix}}/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+> {%
+    client.log(JSON.stringify(response.body))
+    client.log(JSON.stringify(response.body.data.token))
+    client.global.set("token", response.body.data.token)
+%}
+
+
+### 获取后台管理系统用户能访问的菜单列表和按钮列表
+GET {{host}}{{apiPrefix}}/mgr/permission
+Content-Type: application/json
+token: {{token}}
+
+### 获取后台管理系统用户能访问的菜单列表和按钮列表
+GET {{host}}{{apiPrefix}}/mgr/profile
+Content-Type: application/json
+token: {{token}}

@@ -73,6 +73,17 @@
                 <version>${hutool.version}</version>
             </dependency>
             <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-http</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-extra</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.xwplay.crm</groupId>
                 <artifactId>admin-common</artifactId>
                 <version>${project.version}</version>

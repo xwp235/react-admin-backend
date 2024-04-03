@@ -35,10 +35,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.data</groupId>-->
-<!--            <artifactId>spring-data-commons</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -60,11 +56,6 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>mybatis-mate-starter</artifactId>-->
-<!--            <version>${mybatis-mate.version}</version>-->
-<!--        </dependency>-->
 
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -72,7 +63,15 @@
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
             <artifactId>hutool-jwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-extra</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.fastjson2</groupId>

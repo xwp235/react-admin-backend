@@ -1,5 +1,6 @@
-package com.xwplay.crm.boot.resp;
+package com.xwplay.crm.boot.vo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -7,7 +8,7 @@ import java.util.List;
 
 @Data
 @Accessors(chain = true)
-public class AuthMenuResp {
+public class MenuVO {
 
     private Integer id;
     private Integer parentId;
@@ -18,6 +19,7 @@ public class AuthMenuResp {
     private Integer sort;
     private Integer level;
     private String levelChain;
-    private List<AuthMenuResp> children;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<MenuVO> children;
 
 }

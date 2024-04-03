@@ -7,5 +7,6 @@ public class NormalLoginReq {
 
     private String username;
     private String password;
+    private String userType;
 
 }
